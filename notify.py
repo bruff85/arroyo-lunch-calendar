@@ -98,8 +98,8 @@ Events generated: {event_count} school days
 Your calendar subscription will refresh automatically within a few hours.
 
 Subscription links:
-- LCUSD: https://bruff85.github.io/graphql-snf-pipeline/lunch.ics
-- Arroyo: https://bruff85.github.io/healthepro-pipeline/lunch.ics
+- LCUSD: https://bruff85.github.io/lcuds-lunch-calendar/lunch.ics
+- Arroyo: https://bruff85.github.io/arroyo-lunch-calendar/lunch.ics
 
 — Lunch Calendar Bot
 {datetime.now().strftime("%B %d, %Y at %I:%M %p")}
