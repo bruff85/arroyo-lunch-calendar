@@ -1,1 +1,51 @@
+name: Generate Monthly Lunch Calendar
 
+on:
+  schedule:
+    # Second to last day of month at 5:30pm PT (01:30 UTC next day)
+    # Last day of month coverage at 5:30pm PT
+    - cron: '30 1 27 * *'   # 27th 5:30pm PT (covers months ending 28th)
+    - cron: '30 1 29 * *'   # 29th 5:30pm PT (covers months ending 30th)
+    - cron: '30 1 30 * *'   # 30th 5:30pm PT (covers months ending 31st)
+    # Daily retries at 7am PT (14:30 UTC), 10am PT (18:30 UTC), 6pm PT (02:30 UTC)
+    - cron: '30 14 * * *'   # 7am PT daily
+    - cron: '30 18 * * *'   # 10am PT daily
+    - cron: '30 2 * * *'    # 6pm PT daily
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run menu fetcher
+        env:
+          FORCE_RUN: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+        run: python fetch_menu.py
+
+      - name: Commit and push updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A docs/lunch.ics next_month_found.txt 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Update lunch calendar for $(date +'%B %Y')"
+          git push || true
