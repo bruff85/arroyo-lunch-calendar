@@ -6,7 +6,7 @@ Uses the HealthePro API to fetch the monthly lunch menu and generates
 a subscribable ICS calendar file.
 
 API endpoints:
-  GET /api/organizations/547/menus/101711/start_date/YYYY-MM-DD/end_date/YYYY-MM-DD/date_overwrites
+  GET /api/organizations/547/menus/137467/start_date/YYYY-MM-DD/end_date/YYYY-MM-DD/date_overwrites
   GET /api/organizations/547/sites/4782/menus/ (to check published months)
 
 Schedule:
@@ -31,7 +31,7 @@ from notify import notify_success, notify_found_failure, notify_not_found
 BASE_URL        = "https://menus.healthepro.com/api"
 ORG_ID          = "547"
 SITE_ID         = "4782"
-MENU_ID         = "101711"
+MENU_ID         = "137467"
 OUTPUT_ICS      = "docs/lunch.ics"
 NEXT_MONTH_FOUND_FILE = "next_month_found.txt"
 
