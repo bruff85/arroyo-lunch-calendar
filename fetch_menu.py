@@ -6,8 +6,12 @@ Uses the HealthePro API to fetch the monthly lunch menu and generates
 a subscribable ICS calendar file.
 
 API endpoints:
-  GET /api/organizations/547/menus/101711/start_date/YYYY-MM-DD/end_date/YYYY-MM-DD/date_overwrites
-  GET /api/organizations/547/sites/4782/menus/ (to check published months)
+  GET /api/organizations/547/sites/4782/menus/ (to discover the active menu and its published months)
+  GET /api/organizations/547/menus/<menu_id>/year/YYYY/month/M/date_overwrites
+
+The school publishes a new menu (with a new id) each school year, so the
+menu id is discovered from the site's menu list at runtime; MENU_ID below
+is only a fallback.
 
 Schedule:
   - Runs on the 27th of each month at 8:15pm PT
@@ -31,7 +35,9 @@ from notify import notify_success, notify_found_failure, notify_not_found
 BASE_URL        = "https://menus.healthepro.com/api"
 ORG_ID          = "547"
 SITE_ID         = "4782"
-MENU_ID         = "101711"
+# Last known menu id (2026-27 school year) — used only as a fallback when
+# the site's menu list can't identify the right menu for the target month.
+MENU_ID         = "137467"
 OUTPUT_ICS      = "docs/lunch.ics"
 NEXT_MONTH_FOUND_FILE = "next_month_found.txt"
 
@@ -51,27 +57,47 @@ HEADERS = {
 # API FUNCTIONS
 # ─────────────────────────────────────────────
 
-def fetch_published_months():
-    """
-    Fetch the list of published months for our menu.
-    Returns a list of date strings like ['2026-04-01', '2026-05-01']
-    """
+def fetch_site_menus():
+    """Fetch all menus for our site. Returns a list of menu objects."""
     url = f"{BASE_URL}/organizations/{ORG_ID}/sites/{SITE_ID}/menus/"
     response = requests.get(url, headers=HEADERS, timeout=30)
     response.raise_for_status()
-    data = response.json()
-    for menu in data.get("data", []):
+    return response.json().get("data", [])
+
+
+def select_menu(menus, target_month_str):
+    """
+    Pick the menu to use for the target month. The school publishes a new
+    menu (with a new id) each school year, so instead of trusting a fixed
+    id, prefer whichever menu actually has the target month published:
+      1. the last known menu (MENU_ID), if it has the target month
+      2. a lunch-named menu that has the target month
+      3. any menu that has the target month
+      4. fall back to MENU_ID
+    Returns (menu_id, published_months).
+    """
+    def published(menu):
+        return menu.get("published_months") or []
+
+    with_target = [m for m in menus if target_month_str in published(m)]
+    known = [m for m in with_target if str(m.get("id")) == MENU_ID]
+    lunch = [m for m in with_target if "lunch" in str(m.get("name", "")).lower()]
+    for pool in (known, lunch, with_target):
+        if pool:
+            menu = pool[0]
+            return str(menu.get("id")), published(menu)
+    for menu in menus:
         if str(menu.get("id")) == MENU_ID:
-            return menu.get("published_months", [])
-    return []
+            return MENU_ID, published(menu)
+    return MENU_ID, []
 
 
-def fetch_date_overwrites(year, month):
+def fetch_date_overwrites(menu_id, year, month):
     """
     Fetch the day-by-day menu data for a given month.
     Returns list of day objects with date and menu items.
     """
-    url = f"{BASE_URL}/organizations/{ORG_ID}/menus/{MENU_ID}/year/{year}/month/{month}/date_overwrites"
+    url = f"{BASE_URL}/organizations/{ORG_ID}/menus/{menu_id}/year/{year}/month/{month}/date_overwrites"
     print(f"  Fetching: {url}")
     response = requests.get(url, headers=HEADERS, timeout=30)
     response.raise_for_status()
@@ -324,17 +350,19 @@ def main():
         print(f"Already successfully loaded {target_label} — nothing to do.")
         return
 
-    # ── Check published months ─────────────────
-    print(f"\nChecking published months via API...")
+    # ── Discover the right menu for the target month ──
+    print(f"\nChecking site menus via API...")
     try:
-        published = fetch_published_months()
-        print(f"  Published months: {published}")
+        site_menus = fetch_site_menus()
     except Exception as e:
-        print(f"  Could not fetch published months: {e}")
-        published = []
+        print(f"  Could not fetch site menus: {e}")
+        site_menus = []
 
     target_month_str = f"{target_year}-{target_month:02d}-01"
-    if published and target_month_str not in published:
+    menu_id, published = select_menu(site_menus, target_month_str)
+    print(f"  Using menu {menu_id} — published months: {published}")
+
+    if site_menus and target_month_str not in published:
         print(f"  {target_label} not published yet — keeping existing ICS unchanged.")
         print("  Will retry at next scheduled run.")
         notify_not_found("Arroyo Elementary Lunch Calendar", target_label)
@@ -343,7 +371,7 @@ def main():
     # ── Fetch menu data ────────────────────────
     print(f"\nFetching menu data for {target_label}...")
     try:
-        date_overwrites = fetch_date_overwrites(target_year, target_month)
+        date_overwrites = fetch_date_overwrites(menu_id, target_year, target_month)
     except Exception as e:
         print(f"  Failed to fetch menu data: {e}")
         return
@@ -384,10 +412,11 @@ def main():
         next_label = datetime(next_year, next_month, 1).strftime("%B %Y")
         print(f"\nIt's the 27th or later — checking if {next_label} is published yet...")
         next_month_str = f"{next_year}-{next_month:02d}-01"
-        if next_month_str in published:
-            print(f"  {next_label} is published! Fetching...")
+        next_menu_id, next_published = select_menu(site_menus, next_month_str)
+        if next_month_str in next_published:
+            print(f"  {next_label} is published (menu {next_menu_id})! Fetching...")
             try:
-                next_overwrites = fetch_date_overwrites(next_year, next_month)
+                next_overwrites = fetch_date_overwrites(next_menu_id, next_year, next_month)
                 next_daily = parse_daily_menu(next_overwrites)
                 if next_daily:
                     ics_content = generate_ics(next_daily, next_month, next_year,
