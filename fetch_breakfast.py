@@ -28,6 +28,7 @@ import requests
 from datetime import datetime, date, timedelta
 import os
 from notify import notify_success, notify_found_failure, notify_not_found
+from ics_text import description
 
 # ─────────────────────────────────────────────
 # CONFIGURATION
@@ -39,6 +40,11 @@ SITE_ID         = "4782"
 # the site's menu list can't identify the right menu for the target month.
 MENU_ID         = "138500"
 OUTPUT_ICS      = "docs/breakfast.ics"
+
+# Parent-facing breakfast menu on the district's nutrition site — the link that
+# goes in every event's notes. NOT the API above; this is the page a parent
+# opens. Empty means the link line is omitted rather than published broken.
+PUBLISHED_MENU_URL = ""
 NEXT_MONTH_FOUND_FILE = "breakfast_month_found.txt"
 
 # Categories to INCLUDE in the event title (entrees only)
@@ -229,7 +235,7 @@ def generate_ics(daily_menu, month, year, existing_ics_path=None):
             f"DTSTART;TZID=America/Los_Angeles:{date_str}T100000",
             f"DTEND;TZID=America/Los_Angeles:{date_str}T110000",
             f"SUMMARY:{title}",
-            "DESCRIPTION:Arroyo Elementary School Breakfast Menu - Tustin USD",
+            description(PUBLISHED_MENU_URL),
             "TRANSP:TRANSPARENT",
             "END:VEVENT",
         ])
