@@ -41,10 +41,18 @@ SITE_ID         = "4782"
 MENU_ID         = "138500"
 OUTPUT_ICS      = "docs/breakfast.ics"
 
-# Parent-facing breakfast menu on the district's nutrition site — the link that
-# goes in every event's notes. NOT the API above; this is the page a parent
-# opens. Empty means the link line is omitted rather than published broken.
-PUBLISHED_MENU_URL = ""
+# Parent-facing breakfast menu page — the link that goes in every event's notes.
+# Built per-run from the menu id select_menu() resolves, NOT hardcoded: the id
+# changes every month, so a fixed URL would keep pointing at an old month's
+# menu while the events moved on. Same host as BASE_URL, without the /api.
+SITE_BASE_URL   = "https://menus.healthepro.com"
+
+
+def published_menu_url(menu_id):
+    """Public page for one month's breakfast menu, or "" if we have no id."""
+    if not menu_id:
+        return ""
+    return f"{SITE_BASE_URL}/organizations/{ORG_ID}/sites/{SITE_ID}/menus/{menu_id}"
 NEXT_MONTH_FOUND_FILE = "breakfast_month_found.txt"
 
 # Categories to INCLUDE in the event title (entrees only)
@@ -203,7 +211,7 @@ def get_window_months(new_month, new_year, num_months=MONTHS_TO_KEEP):
     return window
 
 
-def generate_ics(daily_menu, month, year, existing_ics_path=None):
+def generate_ics(daily_menu, month, year, menu_id, existing_ics_path=None):
     """Generate cumulative ICS with rolling 4-month window."""
     now = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
     window = get_window_months(month, year)
@@ -235,7 +243,7 @@ def generate_ics(daily_menu, month, year, existing_ics_path=None):
             f"DTSTART;TZID=America/Los_Angeles:{date_str}T100000",
             f"DTEND;TZID=America/Los_Angeles:{date_str}T110000",
             f"SUMMARY:{title}",
-            description(PUBLISHED_MENU_URL),
+            description(published_menu_url(menu_id)),
             "TRANSP:TRANSPARENT",
             "END:VEVENT",
         ])
@@ -394,7 +402,7 @@ def main():
 
     # ── Generate ICS ───────────────────────────
     ics_content = generate_ics(daily_menu, target_month, target_year,
-                               existing_ics_path=OUTPUT_ICS)
+                               menu_id, existing_ics_path=OUTPUT_ICS)
 
     os.makedirs("docs", exist_ok=True)
     old_hash = file_hash(OUTPUT_ICS)
@@ -427,7 +435,7 @@ def main():
                 next_daily = parse_daily_menu(next_overwrites)
                 if next_daily:
                     ics_content = generate_ics(next_daily, next_month, next_year,
-                                               existing_ics_path=OUTPUT_ICS)
+                                               next_menu_id, existing_ics_path=OUTPUT_ICS)
                     new_hash = hashlib.md5(ics_content.encode()).hexdigest()
                     if file_hash(OUTPUT_ICS) != new_hash:
                         with open(OUTPUT_ICS, "w", encoding="utf-8") as f:
