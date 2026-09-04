@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arroyo Elementary Menu Calendars</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         margin: 0; padding: 24px 16px; background: #f6f7f9; color: #1c1c1e; }
+  .wrap { max-width: 560px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; text-align: center; }
+  p.sub { text-align: center; color: #555; margin-top: -8px; }
+  .card { background: #fff; border-radius: 14px; padding: 20px; margin: 18px 0;
+          box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  .card h2 { margin: 0 0 4px; font-size: 1.15rem; }
+  .card .time { color: #666; font-size: .9rem; margin: 0 0 14px; }
+  a.btn { display: block; text-align: center; background: #0a7cff; color: #fff;
+          text-decoration: none; font-weight: 600; padding: 14px; border-radius: 10px;
+          margin-bottom: 12px; }
+  .url { display: flex; gap: 8px; align-items: center; }
+  .url input { flex: 1; font-size: .78rem; padding: 10px 8px; border: 1px solid #d0d0d5;
+               border-radius: 8px; background: #fafafa; color: #333; min-width: 0; }
+  .url button { padding: 10px 14px; border: 0; border-radius: 8px; background: #e4e4e9;
+                font-weight: 600; cursor: pointer; }
+  .hint { font-size: .82rem; color: #777; margin: 10px 0 0; }
+  footer { text-align: center; font-size: .78rem; color: #999; margin-top: 28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🍎 Arroyo Elementary Menu Calendars</h1>
+  <p class="sub">Subscribe once — menus update automatically every month.</p>
+
+  <div class="card">
+    <h2>🥪 Lunch Calendar</h2>
+    <p class="time">Daily entrees, shown 11:30am–12:30pm</p>
+    <a class="btn" href="webcals://bruff85.github.io/arroyo-lunch-calendar/lunch.ics">Subscribe on iPhone / Mac</a>
+    <div class="url">
+      <input type="text" readonly value="https://bruff85.github.io/arroyo-lunch-calendar/lunch.ics" id="lunch-url">
+      <button onclick="copyUrl('lunch-url', this)">Copy</button>
+    </div>
+    <p class="hint">Google Calendar: on a computer, click + next to "Other calendars" → From URL → paste the link above.</p>
+  </div>
+
+  <div class="card">
+    <h2>🥞 Breakfast Calendar</h2>
+    <p class="time">Daily entrees, shown 10:00–11:00am</p>
+    <a class="btn" href="webcals://bruff85.github.io/arroyo-lunch-calendar/breakfast.ics">Subscribe on iPhone / Mac</a>
+    <div class="url">
+      <input type="text" readonly value="https://bruff85.github.io/arroyo-lunch-calendar/breakfast.ics" id="breakfast-url">
+      <button onclick="copyUrl('breakfast-url', this)">Copy</button>
+    </div>
+    <p class="hint">Google Calendar: on a computer, click + next to "Other calendars" → From URL → paste the link above.</p>
+  </div>
+
+  <footer>Menu data sourced from Tustin USD / HealthePro.</footer>
+</div>
+<script>
+function copyUrl(id, btn) {
+  var input = document.getElementById(id);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(input.value).then(function () {
+    btn.textContent = "Copied!";
+    setTimeout(function () { btn.textContent = "Copy"; }, 1500);
+  });
+}
+</script>
+</body>
+</html>
