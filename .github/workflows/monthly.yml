@@ -42,10 +42,23 @@ jobs:
           NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
         run: python fetch_menu.py
 
+      - name: Run breakfast fetcher
+        env:
+          FORCE_RUN: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+        run: python fetch_breakfast.py
+
       - name: Commit and push updated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A docs/lunch.ics next_month_found.txt 2>/dev/null || true
+          # add each path separately: git add aborts all pathspecs if any one matches nothing
+          git add -A docs/lunch.ics 2>/dev/null || true
+          git add -A next_month_found.txt 2>/dev/null || true
+          git add -A docs/breakfast.ics 2>/dev/null || true
+          git add -A breakfast_month_found.txt 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Update lunch calendar for $(date +'%B %Y')"
           git push || true
