@@ -7,237 +7,6 @@ X-WR-CALNAME:Arroyo Elementary Lunch Calendar
 X-WR-TIMEZONE:America/Los_Angeles
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:5c5a3d1f-0afc-5e95-9f1a-3a1bf3659d92
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260901T113000
-DTEND;TZID=America/Los_Angeles:20260901T123000
-SUMMARY:Pollo Verde Burrito | Extreme Bean and Cheese Burrito (Los Cabos) 
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:4afc705b-65a6-5a7a-971b-b78a88a99418
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260902T113000
-DTEND;TZID=America/Los_Angeles:20260902T123000
-SUMMARY:Chicken Nuggets (5 pcs) | WG Chik'n Nuggets, Morning Star
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:a9a14eaf-6168-58ec-ba76-1ccad39cfb54
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260903T113000
-DTEND;TZID=America/Los_Angeles:20260903T123000
-SUMMARY:Italian Sub | Cocoa and CPB Butter Sandwich w/ String Cheese
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:f947b48a-8aca-5daa-9e47-daf6e0d4e69f
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260904T113000
-DTEND;TZID=America/Los_Angeles:20260904T123000
-SUMMARY:Beefy Macaroni and Cheese w/ Texas Toast | Macaroni and Cheese (Land o' Lakes)
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:3a942749-a37c-5805-9d62-d1545461f4be
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260908T113000
-DTEND;TZID=America/Los_Angeles:20260908T123000
-SUMMARY:Mandarin Orange Chicken with Vegetable Fried Rice (2M 2G NEW) | Cheesy Pull-Aparts with Italian Cheese & Garlic Bread
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:862c48b4-7932-5cd9-9ae9-7fd8c6b79a20
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260909T113000
-DTEND;TZID=America/Los_Angeles:20260909T123000
-SUMMARY:Mini Chicken Corn Dogs | WG Chik'n Nuggets, Morning Star
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:6bb43bcd-97e9-540b-8679-60dbd1655002
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260910T113000
-DTEND;TZID=America/Los_Angeles:20260910T123000
-SUMMARY:Turkey & Cheese Sub Sandwich (Tasty Brands) | Soybutter Uncrustables Sandwich (4.6 oz)***
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:386e0e78-fc90-5f6b-bf9f-264cf316e54e
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260911T113000
-DTEND;TZID=America/Los_Angeles:20260911T123000
-SUMMARY:Red Pasta with Chicken Meatballs w/ Texas Toast | Red Pasta with Cheese & Texas Toast
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:dc4e3444-51d5-58e6-9f6d-09341e827161
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260914T113000
-DTEND;TZID=America/Los_Angeles:20260914T123000
-SUMMARY:Cheeseburger Muffin | Grilled Cheese Sandwich (Integrated FS)
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:88231332-3c78-5b60-91a7-d992a5825327
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260915T113000
-DTEND;TZID=America/Los_Angeles:20260915T123000
-SUMMARY:Beef Nachos | Bean Nachos
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:bf160605-b3a1-5d20-b564-dca44d8bb1e5
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260916T113000
-DTEND;TZID=America/Los_Angeles:20260916T123000
-SUMMARY:Chicken Nuggets (5 pcs) | WG Chik'n Nuggets, Morning Star
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:a2a84da7-b4e0-581e-8c58-3cf978a58945
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260917T113000
-DTEND;TZID=America/Los_Angeles:20260917T123000
-SUMMARY:Strawberry Yogurt with Granola | Cocoa and CPB Butter Sandwich w/ String Cheese
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:84e7d89d-1174-50b0-81c9-7a9293af7bb4
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260918T113000
-DTEND;TZID=America/Los_Angeles:20260918T123000
-SUMMARY:Chicken Alfredo with a Twist, Elementary (JTM) | Cheesy Alfredo with a Twist (JTM)
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:1f22f7e8-b573-5e14-a532-e989e30a62a2
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260921T113000
-DTEND;TZID=America/Los_Angeles:20260921T123000
-SUMMARY:FS Pepperoni Pizza Muffiin | FS Cheese Pizza Muffin
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:c70a452f-1826-5960-8a5e-eaad210d8d8f
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260922T113000
-DTEND;TZID=America/Los_Angeles:20260922T123000
-SUMMARY:Turkey and Cheese Sandwich on WG Hoagie | Soybutter Uncrustables Sandwich (4.6 oz)***
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:5f47529b-cbda-5404-a302-78d8991fe1d2
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260923T113000
-DTEND;TZID=America/Los_Angeles:20260923T123000
-SUMMARY:Mini Chicken Corn Dogs | WG Chik'n Nuggets, Morning Star
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:64660c38-f5b3-5318-a752-498017795d7d
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260924T113000
-DTEND;TZID=America/Los_Angeles:20260924T123000
-SUMMARY:Teriyaki Chicken with Vegetable Fried Rice | Cheesy Pull-Aparts with Italian Cheese & Garlic Bread
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:c41c450b-43df-5dc5-adfb-e045036c60a7
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260925T113000
-DTEND;TZID=America/Los_Angeles:20260925T123000
-SUMMARY:Red Pasta with Chicken Meatballs w/ Texas Toast | Red Pasta with Cheese & Texas Toast
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:f017dcdc-13c4-59bc-bb5a-b0117858424a
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260928T113000
-DTEND;TZID=America/Los_Angeles:20260928T123000
-SUMMARY:All American Burger | Grilled Cheese Sandwich
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:eec9986f-30d9-5714-bc08-af19fffac62a
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260929T113000
-DTEND;TZID=America/Los_Angeles:20260929T123000
-SUMMARY:Italian Sub | Cocoa and CPB Butter Sandwich w/ String Cheese
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:d92c802f-8034-5091-a7c7-0e7523bc3e84
-DTSTAMP:20260904T213116Z
-DTSTART;TZID=America/Los_Angeles:20260930T113000
-DTEND;TZID=America/Los_Angeles:20260930T123000
-SUMMARY:Chicken Nuggets (5 pcs) | WG Chik'n Nuggets, Morning Star
-DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
- rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
- ished calendar\; actual meals may vary. Confirm with your school.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:f5e73854-4ca2-5534-bc3a-74ccec0018d0
 DTSTAMP:20260929T222931Z
 DTSTART;TZID=America/Los_Angeles:20261001T113000
@@ -463,6 +232,171 @@ DTSTAMP:20260929T222931Z
 DTSTART;TZID=America/Los_Angeles:20261029T113000
 DTEND;TZID=America/Los_Angeles:20261029T123000
 SUMMARY:All American Burger | Galaxy Cheese Pizza | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bd6aabdc-8cd5-5322-9917-80131b5bd16a
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261102T113000
+DTEND;TZID=America/Los_Angeles:20261102T123000
+SUMMARY:Mandarin Orange Chicken with Vegetable Fried Rice (2M 2G NEW) | Cheesy Pull-Aparts with Italian Cheese & Garlic Bread | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4eada110-2239-565e-9a3f-58c627f55a57
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261103T113000
+DTEND;TZID=America/Los_Angeles:20261103T123000
+SUMMARY:Turkey & Cheese Sub Sandwich (Tasty Brands) | Soybutter Uncrustables Sandwich (4.6 oz)*** | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:6cf78300-0466-5850-8c84-a57b9369e9bf
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261104T113000
+DTEND;TZID=America/Los_Angeles:20261104T123000
+SUMMARY:Chicken Nuggets (5 pcs) | WG Chik'n Nuggets, Morning Star | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e07d04f4-f675-53e9-80f7-d126108db4ff
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261105T113000
+DTEND;TZID=America/Los_Angeles:20261105T123000
+SUMMARY:Galaxy Cheese Pizza | Galaxy Pepperoni Pizza | Cheese Pizza Muffin | Pepperoni Pizza Muffiin | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0b8afcd7-d8de-5e0d-b59e-65202ba023e0
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261106T113000
+DTEND;TZID=America/Los_Angeles:20261106T123000
+SUMMARY:Mini Chicken Corn Dogs | Cocoa and CPB Butter Sandwich w/ String Cheese | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b2f14bd1-ed63-5db7-b1dc-ab6ac1e1fd88
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261109T113000
+DTEND;TZID=America/Los_Angeles:20261109T123000
+SUMMARY:Beef Nachos | Bean Nachos | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a7dd7ddb-5eb5-5819-b7a5-0b3cf0b591ea
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261110T113000
+DTEND;TZID=America/Los_Angeles:20261110T123000
+SUMMARY:Italian Sub | Cocoa and CPB Butter Sandwich w/ String Cheese | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f5bcfd17-5c53-5cf9-af16-c867d58a873f
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261112T113000
+DTEND;TZID=America/Los_Angeles:20261112T123000
+SUMMARY:BBQ Rib Sandwich | Grilled Cheese Sandwich | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:156293e8-6544-5009-abc5-2d2ca591b087
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261113T113000
+DTEND;TZID=America/Los_Angeles:20261113T123000
+SUMMARY:Pizza Crunchers | Soybutter Uncrustables Sandwich (4.6 oz)*** | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5d893c76-8a8a-5432-9552-92f71bdbb423
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261116T113000
+DTEND;TZID=America/Los_Angeles:20261116T123000
+SUMMARY:Pancake Turkey Sausage on a Stick | Cocoa and CPB Butter Sandwich w/ String Cheese | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a73f5851-4bfc-5fb2-b362-95d1bb9ecf89
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261117T113000
+DTEND;TZID=America/Los_Angeles:20261117T123000
+SUMMARY:Turkey and Cheese Sandwich on WG Hoagie | Soybutter Uncrustables Sandwich (4.6 oz)*** | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7adba1ee-4c6f-5323-80ec-f2edc1d051f1
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261118T113000
+DTEND;TZID=America/Los_Angeles:20261118T123000
+SUMMARY:Chicken Nuggets (5 pcs) | WG Chik'n Nuggets, Morning Star
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:9f174de3-eaa2-5ad2-bab3-b683d0741de6
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261119T113000
+DTEND;TZID=America/Los_Angeles:20261119T123000
+SUMMARY:Famous Turkey Shaped Nugget Bowl | Famous Chicken-less Bowl (Elementary) | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4f533a5a-e8c8-572f-baa0-4b68de129399
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261120T113000
+DTEND;TZID=America/Los_Angeles:20261120T123000
+SUMMARY:Chicken Pot Stickers with Teriyaki Sauce and Rice | Soybutter Uncrustables Sandwich (4.6 oz)*** | Strawberry Yogurt with Granola
+DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
+ rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
+ ished calendar\; actual meals may vary. Confirm with your school.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f4a6f1bf-7532-52ee-b519-c4bef3db15db
+DTSTAMP:20261030T074027Z
+DTSTART;TZID=America/Los_Angeles:20261130T113000
+DTEND;TZID=America/Los_Angeles:20261130T123000
+SUMMARY:Pollo Verde Burrito | Extreme Bean and Cheese Burrito (Los Cabos)  | Strawberry Yogurt with Granola
 DESCRIPTION:Full published menu available at https://menus.healthepro.com/o
  rganizations/547/sites/4782/menus/137467\n\nMenus follow the school's publ
  ished calendar\; actual meals may vary. Confirm with your school.
